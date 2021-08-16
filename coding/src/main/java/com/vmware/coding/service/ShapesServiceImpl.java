@@ -28,8 +28,8 @@ public class ShapesServiceImpl implements ShapesService {
 		Map<String, String> task = new HashMap<String, String>();
 		for(Entry<String, String> str : input.getTask().entrySet()) {
 			ObjectMapper objectMapper = new ObjectMapper();
-        	double area = 0;
-            try {
+        		double area = 0;
+            		try {
 
 				Map<String, String> shapeMap = objectMapper.readValue(str.getValue(), HashMap.class);
 				switch(shapeMap.get("type")) {
@@ -47,7 +47,7 @@ public class ShapesServiceImpl implements ShapesService {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-            task.put(str.getKey(), String.valueOf(area));
+            		task.put(str.getKey(), String.valueOf(area));
 		}
 		shapesEntity.setTask(task);
 		Shapes taskSaved = shapesRepository.saveAndFlush(shapesEntity);
