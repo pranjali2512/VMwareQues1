@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,6 +13,7 @@ import com.vmware.coding.entity.Shapes;
 import com.vmware.coding.repository.ShapesRepository;
 import com.vmware.coding.vo.ShapesVO;
 
+@Service
 public class ShapesServiceImpl implements ShapesService {
 
 	private final double PI_CONSTANT = Math.PI *2;
